@@ -1,0 +1,1 @@
+/usr/local/bin/c++  -Wall -Wextra -Wpedantic -Werror=maybe-uninitialized -g CMakeFiles/tests.dir/test/tests01.cpp.o -o tests  libFiguresLib.a lib/libgtest_main.a lib/libgtest.a 

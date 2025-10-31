@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C++",
+            "type": "shell",
+            "command": "g++",
+            "args": ["main.cpp", "-o", "my_app.exe"],
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build and Run C++",
+            "type": "shell",
+            "command": "./my_app.exe",
+            "dependsOn": "Build C++",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

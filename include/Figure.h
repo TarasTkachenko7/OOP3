@@ -2,7 +2,6 @@
 #define FIGURE_H
 
 #include <iostream>
-#include <string>
 #include <utility>
 
 class Figure {
@@ -13,6 +12,7 @@ public:
     virtual std::pair<double, double> center() const = 0;
     virtual double area() const = 0;
     virtual void print(std::ostream& os) const = 0;
+    
     virtual bool operator==(const Figure& other) const = 0;
     virtual operator double() const { return area(); }
 

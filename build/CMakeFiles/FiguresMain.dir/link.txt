@@ -1,0 +1,1 @@
+/usr/local/bin/c++  -Wall -Wextra -Wpedantic -Werror=maybe-uninitialized -g CMakeFiles/FiguresMain.dir/main.cpp.o -o FiguresMain  libFiguresLib.a 

@@ -3,20 +3,24 @@
 
 #include "figure.h"
 
-class Trapezoid : public Figure {
+class Trapezoid final : public Figure {
 public:
     Trapezoid();
     Trapezoid(double a, double b, double h);
+    
+    Trapezoid(const Trapezoid& other);
+    Trapezoid& operator=(const Trapezoid& other);
+    
+    Trapezoid(Trapezoid&& other) noexcept;
+    Trapezoid& operator=(Trapezoid&& other) noexcept;
 
     std::pair<double, double> center() const override;
     double area() const override;
     void print(std::ostream& os) const override;
     bool operator==(const Figure& other) const override;
 
-protected:
-    void read(std::istream& is) override;
-
 private:
+    void read(std::istream& is) override;
     double base1;
     double base2;
     double height;
